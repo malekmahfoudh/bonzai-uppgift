@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Booking-Bonzai</title>
+</head>
+
+<body>
+    <header class="main__header">
+        <img class="header__logo" src="/images/logo/bonz.ai-logo-white-landscape.png" alt="">
+        <img class="header__burger" src="/images/logo/icons8-menu-50.png" alt="">
+    </header>
+
+    <main class="booking">
+        <div class="booking__wrapper">
+            <article class="booking__hero">
+                <h1>Your booking</h1>
+                <img class="booking__hero-img" src="/images/photos/04-night.jpg" alt="">
+            </article>
+            <article class="booking__hero-info">
+                <h2>Standard plus</h2>
+                <p>Ut at risus eget nunc volutpat mollis vitae et sem. <br> Etiam arcu orci, pulvinar sit amet scelerisque at, egestas <br> mollis nibh. Nulla ultrices, elit nec congue posuere, elit <br> neque
+                imperdiet nisl, ut vulputate massa lacus quis lectus.</p>
+                <h3 class="booking__hero-price">$129 <span>/night</span></h3>
+            </article>
+            <article class="booking__form">
+                <h3>Guest information</h3>
+                <form class="booking__form-info">
+                    <label class="booking__label" for="first name">First name</label>
+                    <input class="booking__input" type="text">
+
+                    <label class="booking__label" for="first name">Last name</label>
+                    <input class="booking__input" type="text">
+
+                    <label class="booking__label" for="first name"> E-mail</label>
+                    <input class="booking__input" type="text">
+
+                    <label class="booking__label" for="first name">Phone</label>
+                    <input class="booking__input" type="number">
+
+                    <label class="booking__label" for="first name">Special request</label>
+                    <input class="booking__input" type="text">
+                </form>
+            </article>
+
+            <article class="booking__complete">
+                <h3>Complete your booking</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet augue a nisl vulputate
+                    volutpat a at lectus. Proin facilisis aliquet euismod.</p>
+                <input class="booking__complete-input" type="checkbox">
+                <label class="booking__complete-label" for="checkbox">Confirm</label>
+                <a href="../html/home.html">
+                    <button class="booking__button">Book</button>
+                </a>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <img class="bonzai__img" src="/images/logo/bonz.ai-logo-white-portrait-full.png" alt="">
+        <section class="footer__contact-info">
+            <span>
+                <h3>Contact</h3>
+            </span>
+            <h3>About</h3>
+            <h3>Policy</h3>
+        </section>
+    </footer>
+    <script>
+        document.querySelector('.menu__button')
+            .addEventListener('click', (e) => {
+                document.querySelector('nav').classList.toggle('open')
+            })
+    </script>
+</body>
+
+</html>

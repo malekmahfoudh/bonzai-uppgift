@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Bonzai-AI driven stay</title>
+</head>
+
+<body>
+    <div class="landing__wrapper">
+        <header class="landing__header">
+            <img src="/images/logo/bonz.ai-logo-white-landscape.png" alt="">
+            <p>tel: 556880-2697</p>
+            <button class="menu__button"></button>
+        </header>
+        <main>
+            <article class="landing">
+                <section class="landing__title">
+                    <h1>BEYOND <span>LIMITS</span></h1>
+                    <p>Donec quis tortor sagittis, ac libero. libero velit mauris, aliquam <a
+                            class="landing__link-about" href="../html/about.html">Discover bonz.ai </a></p>
+                </section>
+
+                <form class="form">
+                    <section class="landing__date-arrival">
+                        <input type="text" placeholder="Arrival" onfocus="(this.type='date')"
+                            onblur="(this.type='text')">
+                    </section>
+
+                    <section class="landing__date-departure">
+                        <input type="text" placeholder="Departure" onfocus="(this.type='date')"
+                            onblur="(this.type='text')">
+                    </section>
+
+                    <section class="landing__guests">
+                        <input type="number" placeholder="Guest">
+                    </section>
+
+                </form>
+                <a href="../html/booking.html">
+                    <button class="landing__button">Search</button>
+                </a>
+
+            </article>
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <a class="navbar__list-items" href="../html/booking.html">Accomodations</a>
+                    <a class="navbar__list-items" href="../html/about.html">About us</a>
+                    <a class="navbar__list-items" href="">Contact</a>
+                    <a class="navbar__list-items" href="">Policy</a>
+                </ul>
+            </nav>
+
+        </main>
+    </div>
+    <script>
+        document.querySelector('.menu__button')
+            .addEventListener('click', (e) => {
+                document.querySelector('nav').classList.toggle('open')
+            })
+    </script>
+</body>
+
+</html>
