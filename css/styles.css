@@ -6,31 +6,34 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
 }
-
 button:hover {
     cursor: pointer;
 }
-/* -----LANDING PAGE STYLE----- */
 
-.landing__header {
+
+/* -----COMPONENTS----- */
+
+/* HEADER STYLING */
+.main__header {
+    width: 100vw;
     display: flex;
     justify-content: space-between;
+    background-color: var(--header-color);
 }
-
-.landing__header p {
-    color: white;
-    padding-left: 40rem;
+.header__logo {
+    margin: 0;
+    margin: 1rem;
+    margin-left: 1rem;
+    width: 10.3125rem;
+    height: 2.5rem;
 }
-
 .menu__button {
     display: none;
     background-color: transparent;
@@ -43,13 +46,42 @@ button:hover {
     margin: 0;
 }
 
-.landing__header p, nav {
+/* FOOTER STYLING */
+footer {
+    display: none;
+    justify-content: space-evenly;
+    background: linear-gradient(to bottom, #272727c8, #000000bc), url("../images/photos/09-night.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+.footer__contact-info {
+    display: flex;
+    gap: 5rem;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20rem;
+}
+/* -----COMPONENTS END----- */
+
+
+/* -----LANDING PAGE STYLE----- */
+
+.landing__header {
+    display: flex;
+    justify-content: space-between;
+}
+.landing__header p {
+    color: white;
+    padding-left: 40rem;
+}
+.landing__header p {
     display: none;
 }
-
 nav {
     display: none;
-    background-color:#403b3bf5;
+    background-color: #403b3bf5;
     top: 0;
     right: 0;
     width: 100vw;
@@ -57,13 +89,11 @@ nav {
     transform: translateY(-80vw);
     transition: all 0.6s ease-in;
 }
-
 nav.open {
-    height: 101vh;    
+    height: 101vh;
     transform: translateY(-72vh);
-    
-}
 
+}
 .navbar__list a {
     font-size: 40px;
     line-height: 80px;
@@ -71,7 +101,6 @@ nav.open {
     color: white;
     text-decoration: none;
 }
-
 .landing__header img {
     margin: 0;
     margin-top: 1rem;
@@ -79,7 +108,6 @@ nav.open {
     width: 10.3125rem;
     height: 2.5rem;
 }
-
 .landing__wrapper {
     height: 100vh;
     width: 100vw;
@@ -88,107 +116,62 @@ nav.open {
     background-image: url("../images/photos/02-night.jpg");
     background-repeat: no-repeat;
 }
-
 .landing {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-
 .landing__title {
     color: var(--primary-font);
     margin-top: 3rem;
     margin-left: 3rem;
 }
-
 .landing__title h1 {
     margin: 0;
     margin-top: 2rem;
     font-size: 40px;
 
 }
-
 .landing__title h1 span {
     padding-left: 7rem;
 }
-
 .landing__link-about {
     color: var(--primary-font);
 }
-
 .form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 6rem;
     gap: 1rem;
-    
 }
-
 .form input {
     color: var(--secondary-color);
 }
-
 .form ::-webkit-input-placeholder {
     color: var(--primary-font);
     text-align: center;
     font-size: 18px;
 }
-
 .landing__date-arrival input {
     appearance: none;
     background-color: transparent;
     border: 1px solid white;
     padding: 1rem 2rem;
 }
-
 .landing__date-departure input {
     appearance: none;
     background-color: transparent;
     border: 1px solid white;
     padding: 1rem 2rem;
 }
-
 .landing__guests input {
     appearance: none;
     background-color: transparent;
     border: 1px solid white;
     padding: 1rem 2rem;
 }
-
-.landing__date-arrival, .landing__date-departure, .landing__guests {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-/* .landing__date-arrival, .landing__date-departure, .landing__guests label {
-    appearance: none;
-    border: none;
-    background: none;
-    color: var(--primary-font);
-    height: 50px;
-    width: 200px;
-    
-} */
-
-
-
-.landing__date-input, .landing__date-input, .landing__guests-input {
-    border: solid 1px var(--primary-font);
-    margin-bottom: 10px;
-    padding-left: 5px;
-
-}
-
-.landing__guests {
-    height: 70px;
-}
-
-
-
 .landing__button {
     font-size: 20px;
     appearance: none;
@@ -200,85 +183,49 @@ nav.open {
     width: 230px;
     transition: all 0.4s ease-in;
 }
-
 .landing__button:hover {
     background-color: var(--secondary-color);
-    color:var(--header-color);
+    color: var(--header-color);
 }
 
 
-    
+
 /* -----ABOUT PAGE STYLE----- */
 
 
 
-.about h2, p {
+.about h2,
+p {
     font-weight: lighter;
 }
-
-.main__header {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--header-color);
-
-}
-
-.header__logo {
-    margin: 0;
-    margin: 1rem;
-    margin-left: 1rem;
-    width: 10.3125rem;
-    height: 2.5rem;
-}
-
-.header__burger {
-    margin: 0;
-    margin-right: 1rem;
-    margin-top: 1rem;
-    height: 2.5rem;
-    
-}
-
-
 .about__hero {
     display: flex;
     background-image: url("../images/photos/09-night.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     height: 10.1875rem;
-    background-position-y:77%;
+    background-position-y: 77%;
     margin-bottom: 3rem;
 }
-
 .about__hero h2 {
     color: var(--primary-font);
     font-size: 40px;
     padding-left: 5rem;
     font-weight: lighter;
 }
-
-
-
 .about__cards-reconnect {
-    padding: 0 1rem ;
+    padding: 0 1rem;
     padding-bottom: 2rem;
-    max-width:fit-content;
+    max-width: fit-content;
     display: flex;
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
-
 .about__cards-line {
     margin: 1rem;
     height: 100px;
     border-left: 2px solid var(--primary-color);
 }
-
-/* .about__cards-reconnect--desktop {
-    display: none;
-} */
-
 .about__cards-stay--img {
     display: none;
     position: absolute;
@@ -288,48 +235,39 @@ nav.open {
     background-repeat: no-repeat;
     background-position-y: 80%;
 }
-
 .about__cards-stay {
     margin-left: auto;
-    padding: 0 1rem ;
+    padding: 0 1rem;
     padding-bottom: 2rem;
-    max-width:fit-content;
+    max-width: fit-content;
     display: flex;
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
-
 .about__cards-line--bright {
     margin: 1rem;
     height: 100px;
     border-left: 2px solid var(--secondary-color);
 }
-
 .about__accomodation {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 5rem;
-    
 }
-
 .about__accomodation h2 {
     margin-right: auto;
     color: var(--primary-color);
-
 }
-
 .about__accomodation-img {
     display: flex;
     gap: 1rem;
     justify-content: center;
 }
-
 .about__accomodation-img img {
     max-width: 180px;
 }
-
 .about__button {
     font-size: 20px;
     appearance: none;
@@ -342,32 +280,10 @@ nav.open {
     width: 230px;
     transition: all 0.6s ease-in;
 }
-
 .about__button:hover {
-        background-color: var(--primary-color);
-        color: var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
-
-footer {
-    display: none;
-    justify-content: space-evenly;
-    background: linear-gradient(to bottom, #272727c8, #000000bc ), url("../images/photos/09-night.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    
-    
-}
-
-.footer__contact-info {
-    display: flex;
-    gap: 5rem;
-    color: white;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 20rem;
-}
-
 .bonzai__img {
     width: 15%;
     margin-top: 2rem;
@@ -383,62 +299,50 @@ footer {
     display: grid;
     grid-template-columns: 100%;
     grid-auto-rows: auto;
-    grid-template-areas: 
-    "image"
-    "booking-hero"
-    "form"
-    "complete";
+    grid-template-areas:
+        "image"
+        "booking-hero"
+        "form"
+        "complete";
 }
-
 .booking__hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
-
 .booking__hero-img {
     grid-area: image;
     max-width: 350px;
-    
 }
-
 .booking__hero-info {
     grid-area: booking-hero;
     padding: 2rem;
 }
-
 .booking__hero-info br {
     display: none;
 }
-
 .booking__hero p {
     padding-right: 8rem;
     padding-left: 2.5rem;
 }
-
 .booking__hero h2 {
     margin-bottom: 0;
     padding-right: 12rem;
 }
-
 .booking__hero-price {
     margin-right: 16rem;
 }
-
 .booking__form {
     grid-area: form;
     background-color: var(--secondary-color);
-    margin: 0 2rem 2rem 2rem ;
-    padding: 0 2rem 2rem 2rem ;
+    margin: 0 2rem 2rem 2rem;
+    padding: 0 2rem 2rem 2rem;
 }
-
 .booking__form-info {
     display: flex;
     flex-direction: column;
 }
-
 .booking__input {
     border: none;
     background-color: white;
@@ -447,7 +351,6 @@ footer {
     height: 40px;
     margin-bottom: 1rem;
 }
-
 .booking__complete {
     grid-area: complete;
     display: flex;
@@ -458,15 +361,12 @@ footer {
     margin: 0 2rem;
     padding: 0 2rem 2rem 2rem;
 }
-
 .booking__complete-input {
     width: min-content;
 }
-
 .booking__complete-label {
     width: min-content;
 }
-
 .booking__button {
     font-size: 20px;
     background: none;
@@ -478,46 +378,37 @@ footer {
 }
 
 
-
-
 @media only screen and (min-width: 768px) {
     .navbar {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
     }
-
-    .menu__button, .landing__header p {
+    .menu__button,
+    .landing__header p {
         display: block;
     }
-
     .navbar__list {
         display: flex;
         flex-direction: column;
     }
-
     .landing {
         margin-top: 8rem;
     }
-
-    .landing__title  {
+    .landing__title {
         text-align: center;
     }
-
     .landing__title h1 span {
         padding: 0;
     }
-    
-    .form  {
+    .form {
         display: flex;
         flex-direction: row;
         gap: 2rem;
         margin-right: 6rem;
         margin-top: 3rem;
     }
-
     .about__hero {
         width: 1030px;
         height: 320px;
@@ -526,52 +417,53 @@ footer {
         transition: all 0.6s ease-in;
         font-size: 60px;
     }
-
     .about__hero:hover {
         background-image: url("../images/photos/09-day.jpg");
-        
     }
-
-
     .about__hero h2 {
         margin-left: 12rem;
         margin-top: 3rem;
         font-size: 64px;
     }
-
-
     .about__cards-reconnect {
         max-width: 870px;
         height: 360px;
-        padding: 3rem 0 0 5rem;
+        /* padding: 3rem 0 0 5rem; */
         margin-bottom: 10rem;
     }
-
-
+    .about__cards-reconnect p,
+    div,
+    h2 {
+        position: relative;
+        margin-top: 3rem;
+    }
     .about__cards-line {
         height: 250px;
     }
-
     .about__cards-stay {
         margin-top: 27rem;
         max-width: 100vw;
         height: 600px;
         padding-left: 14rem;
     }
-
     .about__cards-stay--img {
         display: block;
+        margin-top: 3rem;
         width: 1000px;
         height: 500px;
-        
     }
-
-
-    /* .about__cards-stay p, h2, .about__cards-line--bright  {
-        margin-top: 18rem;
-        
-    } */
-
+    .about__cards-stay p,
+    h2 {
+        height: fit-content;
+        display: flex;
+        position: relative;
+        margin-top: auto;
+        margin-bottom: 8rem;
+    }
+    .about__cards-line--bright {
+        margin-top: auto;
+        margin-bottom: 8rem;
+    }
     .about__accomodation {
         background-color: var(--secondary-color);
         max-width: 1000px;
@@ -579,12 +471,9 @@ footer {
         margin-left: auto;
         margin-top: 5rem;
     }
-
     .about__accomodation-img img {
         max-width: 600px;
-        ;
     }
-
     .about__accomodation h2 {
         font-size: 60px;
         margin-left: 3rem;
@@ -592,64 +481,32 @@ footer {
         margin-block-end: 0;
         padding-top: 2rem;
     }
-
     .about__button {
         margin-bottom: 10rem;
-        
     }
-
-
-    /* .about__cards-reconnect--desktop {
-        display: block;
-    } */
-
     .booking__wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: auto;
         grid-template-areas:
-        "booking-hero booking-hero image"
-        "form form form"
-        "complete complete complete " ;
+            "booking-hero booking-hero image"
+            "form form form"
+            "complete complete complete ";
     }
-
     .booking__hero-info {
         padding-left: 3rem;
     }
-
     .booking__hero-info br {
         display: block;
     }
-
     .booking__hero-img {
         padding-bottom: 1rem;
         margin-right: 1rem;
     }
-
     .booking__complete {
         margin-bottom: 5rem;
     }
-
-    
-
     footer {
         display: flex;
     }
-
-    
-
 }
-/* FRÅGOR
--knappar funkar inte (bara om jag lägger en länk (a-tag) i den). Är det ok?
--menyn på landing funkar inte + knappen är inte länkad? 
--menyn sabbar allt
--grid på booking "går sönder" i desktopläge. Enda stället jag fått in grid på. Tips?
- */
-
-
- /* font-size: clamp() 
- aspect-ratio
- grid: repeat(auto-fit, (minmax()))
- 
- 
- grid ligger på fel element. ska ligga på barnen. */
